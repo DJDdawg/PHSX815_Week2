@@ -40,7 +40,38 @@ The code to run this looks like the following:
 >$ python3 CoinAnalysis.py -prob0 0.6 -input0 cointoss1.txt -prob1 0.3 -input1 cointoss2.txt
 ---
 
+The clear distinction between the two distributions is because of the stark contrast in the two hypothesises. 
+
 ### Mr. Rogan's Cookie Hoax
+
+An example that has tortured students since Day 1 of class has now been fully analyzed. 
+
+Each culprit has their own, constant rate parameter corresponding to how many cookies per day that they eat. Our job is to catch the culprit. 
+
+We can simulate data taken from a single culprit with the **CookieTimer.py** program. It can be run in the terminal with, 
+> $ python3 CookieTimer.py
+
+, where we can also use the arguments `-seed xxxx`, `-Nexp xxxx`, `-Nmeas xxxx`, and `-rate xxxx`, the same as before. 
+
+Again, this can be outputted to a textfile using the following:
+
+> $ python3 CookieTimer.py -Nmeas 1000 -Nexp 10 > cookieoutput.txt
+
+This can then be used as the input file for the aptly named analyizng script, **CookieAnalysis.py**, which I painstakingly debugged for the case of Nexp > 1, with the help of my friend Neema.
+
+**CookieAnalysis.py**r can be run with,
+
+> $ python3 CookieAnalysis.py cookie_output.py
+
+which will then sort the data, find the mean value, find quartile values, make a histogram, and add the quartiles to the plot as dashed lines.
+
+Again, a picture of this graph is saved in the repo as **Coin Toss Graph.png**.
+
+![Cookie Analysis Graph](https://github.com/DJDdawg/PHSX815_Week2/blob/master/python/Cookie%20Analysis%20Graph.png))
+
+
+### Gambling with Dice
+
 
 A categorical distribution has been added to the **Random.py** file. It generates a roll of a 6-sided die. By including this class in our previous **rng.py** file. we can generate a text file that contains any amount of permutations of our Random algorithm. The textfile for this is named **dicerolls.txt** and is created by,
 > $ python3 rng.py
@@ -55,24 +86,3 @@ we can create a histogram of the rolls. These are discrete values, as can be see
 *Note: The histogram is a little wonky, I am so sorry. I spend a long time trying to fix it and it only got worse.*
 
 ---
-
-### Gambling with Dice
-
-In this portion of the assignment, the great cookie mystery continues and it is up to us to graph probability distributions to help determine the culprit of the stolen cookies. Through use of familiar random number generators, we can use the **CookieTimer.py** file to generate a spread of times for a particular situation of cookie thievery. We do this by running the code in our terminal with,
-
-> $ python3 CookieTimer.py
-
-where we can also use the arguments `-Nexp ####`, `-Nmeas ####`, and `-seed ####` same as before. We can output this directly to a text file by adding,
-
-> $ python3 CookieTimer.py > cookie_output.py
-
-which can then be used as the input file for the aptly named analyizng script, **CookieAnalysis.py**. We run this by entering,
-
-> $ python3 CookieAnalysis.py cookie_output.py
-
-which will then sort the data, find the mean value, find quartile values, make a histogram, and add the quartiles to the plot as dashed lines. Pretty neat!
-
-![fig3](https://user-images.githubusercontent.com/76142511/215650365-43616cbd-8a3f-4a4e-9089-f35f11698e10.png)
-
-[^1] The code for the file is provided by [Dr. Chris Rogan (crogan) on github](https://github.com/crogan/PHSX815_Week2.git).
-
