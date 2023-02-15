@@ -31,10 +31,12 @@ This takes the output file from **CoinToss.py** and creates a graph from its con
 
 The above graph was created using two different input files, the first having a probaility of 30%, and the second having a probability of 60%. Each experiment had 100 coin flips, and 10 total experiments were ran. 
 
-The code to run this looks like the following.
+The code to run this looks like the following:
 
 >$ python3 CoinToss.py -prob 0.6 -Ntoss 100 -Nexp 10 -output cointoss1.txt
+>
 >$ python3 CoinToss.py -prob 0.3 -Ntoss 100 -Nexp 10 -output cointoss2.txt
+>
 >$ python3 CoinAnalysis.py -prob0 0.6 -input0 cointoss1.txt -prob1 0.3 -input1 cointoss2.txt
 ---
 
