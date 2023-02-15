@@ -81,11 +81,11 @@ Here is an example of runnning this code with a weighted dice.
 
 This sends the output of this program to a text file named **Dicerolls1.txt**
 
-Just like previously, we then use this input file and feed it into our analysis program, the aptly named **DiceAnalysis.py**, which I am still creating and is the first part of my project.
+Just like previously, we then use this input file and feed it into our analysis program **DiceHist.py**, which counts the outcome of each dice roll, and produces a histogram of the results. 
 
-The plot creates a histogram of the die rolls. The graph is included in the folder as **Graph_plot_rng.py**.
+> $ python3 Dicehist.py Dicerolls1.txt
+> 
+> The graph is included in the folder as **Dice Roll Graph.png**.
 
-![Graph_plot_rng.py](https://user-images.githubusercontent.com/76142511/215650195-cb703a08-aa43-435c-90ae-4fd4cd93a314.png)
-
-The above is Neema's graph and not mine, I'm still working on the code to analyze mine!
+![Dice Roll Graph]([(https://github.com/DJDdawg/PHSX815_Week2/blob/master/python/Dice%20Roll%20Graph.png))
 ---
