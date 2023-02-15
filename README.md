@@ -27,7 +27,7 @@ To do this, use the **cointossoutput.txt** file as an input file for the **CoinA
 
 This takes the output file from **CoinToss.py** and creates a graph from its contents. A picture of this graph is saved in the repo as **Coin Toss Graph.png**.
 
-![Coin Toss Graph.png](https://github.com/DJDdawg/PHSX815_Week2/blob/master/python/Coin%20Toss%20Graph.png))
+![Coin Toss Graph.png](https://github.com/DJDdawg/PHSX815_Week2/blob/master/python/Coin%20Toss%20Graph.png)
 
 The above graph was created using two different input files, the first having a probaility of 30%, and the second having a probability of 60%. Each experiment had 100 coin flips, and 10 total experiments were ran. 
 
@@ -67,7 +67,7 @@ which will then sort the data, find the mean value, find quartile values, make a
 
 Again, a picture of this graph is saved in the repo as **Coin Toss Graph.png**.
 
-![Cookie Analysis Graph](https://github.com/DJDdawg/PHSX815_Week2/blob/master/python/Cookie%20Analysis%20Graph.png))
+![Cookie Analysis Graph](https://github.com/DJDdawg/PHSX815_Week2/blob/master/python/Cookie%20Analysis%20Graph.png)
 
 
 ### Gambling with Dice
@@ -87,5 +87,5 @@ Just like previously, we then use this input file and feed it into our analysis 
 > 
 > The graph is included in the folder as **Dice Roll Graph.png**.
 
-![Dice Roll Graph]([(https://github.com/DJDdawg/PHSX815_Week2/blob/master/python/Dice%20Roll%20Graph.png))
+![Dice Roll Graph](https://github.com/DJDdawg/PHSX815_Week2/blob/master/python/Dice%20Roll%20Graph.png)
 ---
