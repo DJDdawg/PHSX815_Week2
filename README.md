@@ -9,7 +9,7 @@ To simulate a coin toss, run the **CoinToss.py**. file with Python [^1] . In Lin
 
 Variables that you can mess around with include the seed, the number of tosses per experiment, and the number of experiment. 
 
-To do this enter values after the appropiate argument: `-seed xxxx`, `-Ntoss xxxx`, `-Nexp ####`. 
+To do this enter values after the appropiate argument: `-seed xxxx`, `-Ntoss xxxx`, `-Nexp xxxx`. 
 
 You can also choose to output to a textfile by doing `-output cointossoutput.txt`, naming the output file whatever you want. 
 
