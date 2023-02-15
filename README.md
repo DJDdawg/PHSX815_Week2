@@ -38,9 +38,9 @@ The code to run this looks like the following:
 >$ python3 CoinToss.py -prob 0.3 -Ntoss 100 -Nexp 10 -output cointoss2.txt
 >
 >$ python3 CoinAnalysis.py -prob0 0.6 -input0 cointoss1.txt -prob1 0.3 -input1 cointoss2.txt
----
 
 The clear distinction between the two distributions is because of the stark contrast in the two hypothesises. 
+---
 
 ### Mr. Rogan's Cookie Hoax
 
@@ -57,9 +57,9 @@ Again, this can be outputted to a textfile using the following:
 
 > $ python3 CookieTimer.py -Nmeas 1000 -Nexp 10 > cookieoutput.txt
 
-This can then be used as the input file for the aptly named analyizng script, **CookieAnalysis.py**, which I painstakingly debugged for the case of Nexp > 1, with the help of my friend Neema.
+This can then be used as the input file for the aptly named analyizng script, **CookieAnalysis.py**, which I painstakingly debugged for the case of Nexp > 1, with the help of my friend Neema. He helped explain the code for plotting the histograms, mean, and quartiles. 
 
-**CookieAnalysis.py**r can be run with,
+**CookieAnalysis.py** can be run with,
 
 > $ python3 CookieAnalysis.py cookie_output.py
 
@@ -72,17 +72,21 @@ Again, a picture of this graph is saved in the repo as **Coin Toss Graph.png**.
 
 ### Gambling with Dice
 
+A categorical distribution has been added to the **Random.py** file. This simulates a a roll of a 6-sided die, which is often used in the fabled college game "Beer Die", or the more family friendly "Yahtzee!".
 
-A categorical distribution has been added to the **Random.py** file. It generates a roll of a 6-sided die. By including this class in our previous **rng.py** file. we can generate a text file that contains any amount of permutations of our Random algorithm. The textfile for this is named **dicerolls.txt** and is created by,
-> $ python3 rng.py
+Then, the **DiceRoll.py** program was created to simulate rolling that dice multiple time. Similar to **CookieTimer.py**, you have some arguments to mess around with. They are, `-seed xxxx`, `-Nroll xxxx`, `-Nexp xxxx`, `-p1 x.x`, `-p2 x.x`, `-p3 x.x`, `-p4 x.x`, `-p5 x.x`. Nroll is the number of times that the dice is rolled in a single experiment, and each pi is the probability of rolling a certain side of the die. By default, each pi is 1/6, just like a normal die. Be careful that the sum of p1 through p6 is 1 if you decide to weight your die!
 
-By then running,
-> $ python3 plot_rng.py
+Here is an example of runnning this code with a weighted dice.
+>$ python3 DiceRoll.py -Nroll 50 -Nexp 5 -p1 0.3 -p2 0.1 -p3 0.1 -p4 0.2 -p5 0.1 -output Dicerolls1.txt
 
-we can create a histogram of the rolls. These are discrete values, as can be seen in the **dicerolls.txt** file. The output graph is included in the folder as **Graph_plot_rng.py**.
+This also sends the output of this program to a text file named *Dicerolls1.txt**
+
+Just like previously, we then use this input file and feed it into our analysis program, the aptly named **DiceAnalysis.py**, which I am still creating and is the first part of my project.
+
+
+The plot creates a histogram of the die rolls. The graph is included in the folder as **Graph_plot_rng.py**.
 
 ![Graph_plot_rng.py](https://user-images.githubusercontent.com/76142511/215650195-cb703a08-aa43-435c-90ae-4fd4cd93a314.png)
 
-*Note: The histogram is a little wonky, I am so sorry. I spend a long time trying to fix it and it only got worse.*
-
+The above is Neema's graph and not mine, I'm still working on the code to analyze mine!
 ---
