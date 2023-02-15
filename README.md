@@ -2,31 +2,40 @@
 
 Week 2 lecture and Homework involved Tossing Coins (Bernoulli and Binomial Distributions), Rolling Dice (Categorical and Multinomial Distributions), and the continued mystery of Mr. Rogan's missing cookie fiasco (Exponential and Erlang Distributions)!
 
+Everything is in the Python folder, so go there!
+
 ### Tossing Coins
 
-To simulate a coin toss, run the **CoinToss.py**. file with Python. In Linux, this means opening the containing folder in the terminal and simply running, 
+To simulate a coin toss, run the **CoinToss.py**. file with Python. In Linux, this means opening the PHSX815_Week2 folder in the terminal and simply running, 
 > $ python3 CoinToss.py
 
-Variables that you can mess around with include the seed, the number of tosses per experiment, and the number of experiment. 
+Variables that you can mess around with include the probability of landing on heads, the seed, the number of tosses per experiment, and the number of experiment. 
 
-To do this enter values after the appropiate argument: `-seed xxxx`, `-Ntoss xxxx`, `-Nexp xxxx`. 
+To do this enter values after the appropiate argument: `-seed x.x`,`-seed xxxx`, `-Ntoss xxxx`, `-Nexp xxxx`. 
 
 You can also choose to output to the program to a textfile with the following unix command: 
-> $ python3 CoinToss.py -output cointossoutput.txt
+> $ python3 CoinToss.py -output cointoss1.txt
 
 You can name the output file whatever you want, and can include any additional arguments mentioned above.
 
 Note: With the same seed value, you will get the same string of numbers from the algorithm as your output, so make sure to change the seed number if you are wanting to see a variety of outcomes. 
 
-Then, this **cointossoutput.txt** can then be used as the input file for the **CoinAnalysis.py** file with the following argument:
+The default probability for landing on heads is 0.5 (50%), but you can compare data according to different hypothesis (probabilities) using the **CoinAnalysis.py** program.
+
+To do this, use the **cointossoutput.txt** file as an input file for the **CoinAnalysis.py** file with the following argument:
 > $ python3 CoinAnalysis.py -cointossoutput.txt
 
-This takes the output file from **CoinToss.py** and creates a graph from its contents. A picture of this graph is saved in the repo as **Cookie Analysis Graph.png**.
+This takes the output file from **CoinToss.py** and creates a graph from its contents. A picture of this graph is saved in the repo as **Coin Toss Graph.png**.
 
-![Cookie Analysis Graph.png](https://user-images.githubusercontent.com/76142511/215650136-61e40222-1fbc-47fe-83fa-cbb7b49621b5.png)
+![Coin Toss Graph.png](https://github.com/DJDdawg/PHSX815_Week2/blob/master/python/Coin%20Toss%20Graph.png))
 
-*Note: I do not understand what this graph means nor do I understand if it correct. But it does run, and that is all that matters. Dr. Rogan showed us in class what it was supposed to look like, but I do not recall what that was.*
+The above graph was created using two different input files, the first having a probaility of 30%, and the second having a probability of 60%. Each experiment had 100 coin flips, and 10 total experiments were ran. 
 
+The code to run this looks like the following.
+
+>$ python3 CoinToss.py -prob 0.6 -Ntoss 100 -Nexp 10 -output cointoss1.txt
+>$ python3 CoinToss.py -prob 0.3 -Ntoss 100 -Nexp 10 -output cointoss2.txt
+>$ python3 CoinAnalysis.py -prob0 0.6 -input0 cointoss1.txt -prob1 0.3 -input1 cointoss2.txt
 ---
 
 ### Mr. Rogan's Cookie Hoax
