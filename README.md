@@ -84,8 +84,8 @@ This sends the output of this program to a text file named **Dicerolls1.txt**
 Just like previously, we then use this input file and feed it into our analysis program **DiceHist.py**, which counts the outcome of each dice roll, and produces a histogram of the results. 
 
 > $ python3 Dicehist.py Dicerolls1.txt
-> 
-> The graph is included in the folder as **Dice Roll Graph.png**.
+
+The graph is included in the folder as **Dice Roll Graph.png**.
 
 ![Dice Roll Graph](https://github.com/DJDdawg/PHSX815_Week2/blob/master/python/Dice%20Roll%20Graph.png)
 ---
