@@ -6,7 +6,7 @@ import numpy as np
 
 # import our Random class from python/Random.py file
 sys.path.append(".")
-from python.Random import Random
+import Random as rng
 
 # main function for our coin toss Python code
 if __name__ == "__main__":
@@ -56,7 +56,7 @@ if __name__ == "__main__":
         doOutputFile = True
 
     # class instance of our Random class using seed
-    random = Random(seed)
+    random = rng.Random(seed)
 
     if doOutputFile:
         outfile = open(OutputFileName, 'w')
