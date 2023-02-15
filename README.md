@@ -1,4 +1,4 @@
-# PHSX815 Spring 2021 Week 2
+# PHSX815 Spring 2023 Week 2
 
 Week 2 lecture and Homework involved Tossing Coins (Bernoulli and Binomial Distributions), Rolling Dice (Categorical and Multinomial Distributions), and the continued mystery of Mr. Rogan's missing cookie fiasco (Exponential and Erlang Distributions)!
 
@@ -79,10 +79,9 @@ Then, the **DiceRoll.py** program was created to simulate rolling that dice mult
 Here is an example of runnning this code with a weighted dice.
 >$ python3 DiceRoll.py -Nroll 50 -Nexp 5 -p1 0.3 -p2 0.1 -p3 0.1 -p4 0.2 -p5 0.1 -output Dicerolls1.txt
 
-This also sends the output of this program to a text file named *Dicerolls1.txt**
+This sends the output of this program to a text file named **Dicerolls1.txt**
 
 Just like previously, we then use this input file and feed it into our analysis program, the aptly named **DiceAnalysis.py**, which I am still creating and is the first part of my project.
-
 
 The plot creates a histogram of the die rolls. The graph is included in the folder as **Graph_plot_rng.py**.
 
